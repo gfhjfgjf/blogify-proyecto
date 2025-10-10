@@ -36,3 +36,11 @@ export const login = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+/**
+ * Logout (stateless): simplemente responder. 
+ * El frontend debe eliminar el token (o si usas httpOnly cookie, borrarla aquí).
+ */
+export const logout = async (req, res) => {
+  res.json({ msg: "Logout exitoso (el cliente debe eliminar el token)" });
+};
